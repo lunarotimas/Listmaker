@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Listmaker">
         <activity
-            android:name=".ui.main.ListDetailActivity"
+            android:name=".ui.main.ui.detail.ListDetailActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
