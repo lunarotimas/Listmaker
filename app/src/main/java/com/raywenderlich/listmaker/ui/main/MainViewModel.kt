@@ -6,6 +6,15 @@ import com.raywenderlich.listmaker.TaskList
 
 // constructor with shared preferences
 class MainViewModel(private val sharedPreferences: SharedPreferences) : ViewModel() {
+
+    lateinit var list: TaskList
+    lateinit var onTaskAdded: (() -> Unit)
+
+    fun addTask(task: String) {
+        list.tasks.add(task)
+        onTaskAdded.invoke()
+    }
+
     // tell classes when a list is added
     lateinit var onListAdded: (() -> Unit)
     // lists property that stays empty unless called
